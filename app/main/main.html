@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="filterDiv">
+		<input type="text" class="searchInput" name="searchKeyword" title="Enter text to search for tweets or users"
+		ng-model="searchKeyword" placeholder="Type to search users"/>
+		<label class="control-label">Show</label>
+		<select class= "selectQuantity" ng-model="quantityToShow" ng-init="quantityToShow = '5'" title="Number of tweets to show">
+			<option value="5">5</option>
+			<option value="10">10</option>
+			<option value="20">20</option>
+		</select>
+		<button class="button-search" ng-click="SearchUsers()">Search</button>
+	</div>
+	<div id="donut-charts"></div>
+	<table class="tweetsTable fade-in-out" ng-show="ShowData()">
+		<tr ng-repeat="tweet in Tweets">
+			<td class="users-cell">
+				<div class="tweetDetail">
+					<img src="assets/img/new_window.png" ng-click="OpenLink(tweet.user.screen_name + '/status/' + tweet.id_str)"
+						height="24" width="24"></img>
+				</div>
+				<div class="userProfile">
+					<img class="profileImg" src="{{tweet.user.profile_image_url}}" height="42" width="42"></img>
+					<span>{{tweet.user.name}}</span> <a href="" ng-click="OpenLink(tweet.user.screen_name)">@{{tweet.user.screen_name}}</a>
+				</div>
+				<div class="message-span">
+					<span>{{tweet.text}}</span>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div class="noResultsDiv fade-in-out" ng-if="Tweets.length === 0">
+		<label>No results for {{noResultKeyword}}</label>
+	</div>
+</div>
+<div class="modal">

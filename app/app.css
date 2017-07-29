@@ -1,0 +1,308 @@
+/* app css stylesheet */
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+    background-image: url('assets/img/twitter_background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+	position: fixed;
+    width: 100%;
+    
+    background: #15b3c9;
+    color: #fff;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-family: 'Neverwinter', sans-serif;
+    font-size: 62px;
+    font-style: italic;
+
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+
+    box-shadow: 0px 2px 5px 2px #ccc;
+    -moz-box-shadow: 0px 2px 5px 2px #ccc;
+    -webkit-box-shadow: 0px 2px 5px 2px #ccc;
+
+    z-index: 999;
+}
+
+header h1 {
+	margin: 0;
+    font-size: 38px;
+}
+
+header.sticky {
+	font-size: 20px;
+	height: 40px;
+	background: #205368;
+	padding-left: 20px;
+	justify-content: flex-start;
+	text-align: left;
+}
+
+header.sticky h1 {
+    font-size: 20px;
+}
+
+.main-div {
+    width: 800px;
+    margin-top: 50px;
+}
+
+.container {
+    top: 60px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+    justify-content: center;
+    width: 100%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+footer img {
+	margin-right: 8px;
+	margin-bottom: 8px;
+}
+
+/*************************************************/
+/********************Filters**********************/
+/*************************************************/
+
+.filterDiv {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.filterDiv img {
+    margin-left: 10px;
+}
+
+.filterDiv label {
+    margin-left: 2%;
+}
+
+.searchInput {
+    width: 50%;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 25px;
+    border: none;
+    border-bottom: solid 2px #c9c9c9;
+    border-radius: 2em;
+    transition: border 0.3s;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    padding-left: 10px;
+}
+
+.searchInput:focus, .selectQuantity:focus{
+    border-bottom: solid 2px #969696;
+    box-shadow: 0 0 3pt 2pt #d6f2fe;
+    outline: none;
+}
+
+.selectQuantity {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 2em;
+    overflow: hidden;
+    background-color: #fff;
+    background: #fff;
+    width: 50px;
+    height: 25px;
+    border-bottom: solid 2px #c9c9c9;
+    margin-left: 10px;
+}
+
+.button-search {
+    margin-left: 25px;
+    -moz-box-shadow:inset 0px -3px 7px 0px #29bbff;
+    -webkit-box-shadow:inset 0px -3px 7px 0px #29bbff;
+    box-shadow:inset 0px -3px 7px 0px #29bbff;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2dabf9), color-stop(1, #0688fa));
+    background:-moz-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+    background:-webkit-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+    background:-o-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+    background:-ms-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+    background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2dabf9', endColorstr='#0688fa',GradientType=0);
+    background-color:#2dabf9;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border: none;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    padding:9px 23px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #263666;
+}
+.button-search:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0688fa), color-stop(1, #2dabf9));
+    background:-moz-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+    background:-webkit-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+    background:-o-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+    background:-ms-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+    background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0688fa', endColorstr='#2dabf9',GradientType=0);
+    background-color:#0688fa;
+}
+.button-search:active {
+    position:relative;
+    top:1px;
+}
+
+/************************************************/
+/**********************Table*********************/
+/************************************************/
+
+table {
+    width: 800px;
+}
+
+.tableHeader {
+	font-size: 22px;
+	text-shadow: 2px 2px #e5e5e5;
+}
+
+.tweetsTable {
+    margin: auto;
+    font-family: Arial,sans-serif;
+    opacity: 0.8;
+}
+
+.tweetsTable tr {
+    border-radius: 5px;
+    display: inline-table;
+    margin-top: 10px;
+    box-shadow: 2px 2px 1px 1px grey;
+    opacity: 0.8;
+}
+
+.tweetsTable tr:nth-child(odd) {
+    background-color: #b1dee7;
+}
+
+.tweetsTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tweetsTable tr td div:first-child {
+    margin: 10px;
+    line-height: 42px;
+    height: 42px;
+}
+
+.tweetsTable img {
+	border-radius: 2em;
+}
+
+.users-cell {
+	vertical-align: baseline;
+    position: relative;
+    width: 20%;
+}
+
+.users-cell img {
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.users-cell label {
+    line-height: 60px;
+}
+
+.userProfile span {
+    font-weight: bold;
+}
+
+.tweetDetail {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.message-span {
+    margin-left: 56px;
+    margin-right: 56px;
+}
+
+.profileImg:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 42px;
+    width: 42px;
+    background-image: url(http://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png);
+}
+
+.noResultsDiv {
+	width: 100%;
+    height: 50px;
+	justify-content: center;
+    align-items: center;
+	display: flex;
+    font-weight: bold;
+    font-size: 22px;
+    color: red;
+}
+
+/*************************************************/
+/********************Loading**********************/
+/*************************************************/
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+#donut-charts {
+    width: 40%;
+    margin: auto;
+}
+
+.invisible {
+    display: none;
+}
