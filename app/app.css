@@ -189,7 +189,6 @@ table {
 .tweetsTable {
     margin: auto;
     font-family: Arial,sans-serif;
-    opacity: 0.8;
 }
 
 .tweetsTable tr {
@@ -197,15 +196,14 @@ table {
     display: inline-table;
     margin-top: 10px;
     box-shadow: 2px 2px 1px 1px grey;
-    opacity: 0.8;
 }
 
 .tweetsTable tr:nth-child(odd) {
-    background-color: #b1dee7;
+    background-color: rgba(177, 222, 231, 0.9);
 }
 
 .tweetsTable tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: rgba(242, 242, 242, 0.9);
 }
 
 .tweetsTable tr td div:first-child {
